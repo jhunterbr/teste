@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        <body{
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 20pt Arial;
+            width: 100px;
+        }
+        div#truco {
+            margin-top: 20px;
+            font: bold 30pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>TESTE DE CALCULADORA</h1>
+    <input type="number" name="txtn1" id="txtn1"> <strong>+</strong> <!-- Cria espaço para adicionar n1-->
+    <input type="number" name="txtn2" id="txtn2"> <!-- Cria espaço para adicionar n2-->
+    <input type="button" value="somar" onclick="somar()"> <!--cria botao para apertar-->
+    <div id="truco">Resultado</div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1') //seleciona o txtn1
+            var tn2 = window.document.querySelector('input#txtn2') //seleciona o txtn2
+            var res = window.document.getElementById('truco') //Seleciona o Resultado
+            var n1 = Number(tn1.value) //atribui valor de número a tn1
+            var n2 = Number(tn2.value) //atribui valor de número a tn2
+            var resul = n1 + n2 //Soma dos números
+            truco.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${resul}</strong>`
+        }
+    </script>
+</body>
+</html>
